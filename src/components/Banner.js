@@ -8,7 +8,7 @@ const Banner = ({ navigation }) => {
   return (
     <View>
       <View style={styles.banner}>
-        <ImageBackground source={require("./image/banner.png")} style={styles.image}>
+        <ImageBackground source={require("./image/dp.jpg")} style={styles.image}>
           <View style={styles.txtGroup}>
             <Text style={styles.text}>Save extra on every order</Text>
             <Text style={styles.txt}>Etiam mollis metus non faucibus sollicitudin.</Text>

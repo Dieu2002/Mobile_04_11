@@ -7,25 +7,25 @@ export default function Home() {
     {
       id:0,
       name:'Sugar Substitute',
-      img:require('./image/MaskGroup.png'),
+      img:require('./image/01.jpg'),
       price:''
     },
     {
       id:1,
       name:'Juices & Vinegars',
-      img:require('./image/MaskGroup2.png'),
+      img:require('./image/03.jpg'),
       price:''
     },
     {
       id:2,
       name:'Vitamins Medicines',
-      img: require('./image/image135.png'),
+      img: require('./image/08.jpeg'),
       price:''
     },
     {
       id:3,
       name:'Vitamins Medicines',
-      img:require('./image/image22.png'),
+      img:require('./image/t1.jpg'),
       price:''
     }
   ]);
@@ -33,32 +33,32 @@ export default function Home() {
     {
       id:0,
       name:'Accu-check Active Test Strip',
-      img: require('./image/image20.png'),
+      img: require('./image/t2.jpg'),
       price:'112'
     },
     {
       id:1,
       name:'Omron HEM-8712 BP Monitor',
-      img: require('./image/image21.png'),
+      img: require('./image/t2.jpg'),
       price:'150'
     },
     {
       id:2,
       name:'Accu-check Active Test Strip',
-      img: require('./image/image22.png'),
+      img: require('./image/áo 2.jpg'),
       price:'112'
     },
     {
       id:3,
       name:'Omron HEM-8712 BP Monitor',
-      img: require('./image/image20.png'),
+      img: require('./image/áo1.jpeg'),
       price:'150'
     }
   ]);
   return(
     <View style={styles.container}>
       <View style={styles.banner}>
-        <ImageBackground source={require("./image/banner.png" )}  style={styles.image}>
+        <ImageBackground source={require("./image/be.png" )}  style={styles.image}>
           <View style={styles.txtGroup}>
             <Text style={styles.text}>Save extra on every order</Text>
             <Text style={styles.txt}>Etiam mollis metus non faucibus sollicitudin.</Text>
