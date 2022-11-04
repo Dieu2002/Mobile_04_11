@@ -7,6 +7,7 @@ import Banner from './src/components/Banner';
 import Profile from './src/components/Profile';
 import Detail from './src/components/Detail';
 import Map from './src/components/Map';
+import Notify from './src/components/Notification';
 
 const Tab = createBottomTabNavigator();
 
@@ -29,8 +30,8 @@ function MyTabs() {
         }}
       />
       <Tab.Screen
-        name="Banner"
-        component={Banner}
+        name="Notification"
+        component={Notify}
         options={{
           tabBarLabel: 'Notification',
           tabBarIcon: ({color, size}) => (

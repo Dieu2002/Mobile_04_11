@@ -2,16 +2,17 @@ import React from 'react';
 import {StyleSheet, Text, View, Image} from 'react-native';
 
 
-const Detail = () => {
+const Notify = () => {
   return (
     <View style={styles.container}>
+    
       <Text
         style={{fontWeight: '900', fontSize: 22, color: '#090F47', left: 20}}>
         Sugar Free Gold Low Calories{' '}
       </Text>
       <Text style={styles.captionTitle}> Etiam mollis metus mon purus</Text>
       <View style={styles.logo}>
-        <Image style={styles.slideImage} source={require('./image/dp.jpg')} />
+        <Image style={styles.slideImage} source={require('./image/notificaion.png')} />
       </View>
       <View style={styles.introDetail}>
         <View>
@@ -153,4 +154,4 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   }
 });
-export default Detail;
+export default Notify;

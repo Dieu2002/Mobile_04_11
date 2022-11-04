@@ -1,13 +1,12 @@
 import {View, Text, StyleSheet, ScrollView, Image} from 'react-native';
 import React from 'react';
-import Icon from 'react-native-vector-icons/FontAwesome';
 const Profile = () => {
   return (
     <ScrollView style={styles.container}>
       <View style={styles.profile}>
         <Image
           style={styles.logo}
-          source={require('./image/be.png')}
+          source={require('./image/dp.jpg')}
         />
         <View style={styles.title}>
           <Text style={styles.title_main}>Diệu</Text>
@@ -17,47 +16,38 @@ const Profile = () => {
       <View style={styles.items}>
         <View style={styles.item}>
           <View style={styles.iconLeft}>
-            <Icon name="pencil-square-o" size={25} color="black" />
+          <Image
+              source={require('./image/pv.png')}
+              style={{width: 26, height: 30, }}
+            />
           </View>
           <View style={styles.infoContent}>
             <Text style={styles.info}>Private Account</Text>
           </View>
-          <View style={styles.iconRight}>
-            <Icon name="chevron-right" size={15} color="black" />
-          </View>
         </View>
         <View style={styles.item}>
-          <View style={styles.iconLeft}>
-            <Icon name="gears" size={25} color="black" />
-          </View>
-          <View style={styles.infoContent}>
-            <Text style={styles.info}>Faq</Text>
-          </View>
-          <View style={styles.iconRight}>
-            <Icon name="chevron-right" size={15} color="black" />
-          </View>
-        </View>
-        <View style={styles.item}>
-          <View style={styles.iconLeft}>
-            <Icon name="lemon-o" size={25} color="black" />
+        <View style={styles.iconLeft}>
+          <Image
+              source={require('./image/ab.png')}
+              style={{width: 26, height: 30, }}
+            />
           </View>
           <View style={styles.infoContent}>
             <Text style={styles.info}>My Album</Text>
           </View>
-          <View style={styles.iconRight}>
-            <Icon name="chevron-right" size={15} color="black" />
-          </View>
+        
         </View>
         <View style={styles.item}>
-          <View style={styles.iconLeft}>
-            <Icon name="certificate" size={25} color="black" />
+        <View style={styles.iconLeft}>
+          <Image
+              source={require('./image/strore.jpg')}
+              style={{width: 26, height: 30, }}
+            />
           </View>
           <View style={styles.infoContent}>
             <Text style={styles.info}>My Store</Text>
           </View>
-          <View style={styles.iconRight}>
-            <Icon name="chevron-right" size={15} color="black" />
-          </View>
+         
         </View>
       </View>
     </ScrollView>
@@ -69,8 +59,8 @@ const styles = StyleSheet.create({
     top: 30,
   },
   logo: {
-    width: 75,
-    height: 75,
+    width: 95,
+    height: 95,
     left: 23,
     borderRadius: 63,
     borderWidth: 4,

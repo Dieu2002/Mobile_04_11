@@ -6,26 +6,26 @@ const TopProducts = () => {
   const [products, setProducts] = useState([
     {
       id:0,
-      name:'Sugar Substitute',
-      img:require('./image/MaskGroup.png'),
+      name:'Áo bomber ',
+      img:require('./image/t2.jpg'),
       price:''
     },
     {
       id:1,
       name:'Juices & Vinegars',
-      img:require('./image/MaskGroup2.png'),
+      img:require('./image/áo 2.jpg'),
       price:''
     },
     {
       id:2,
       name:'Vitamins Medicines',
-      img:require('./image/image135.png'),
+      img:require('./image/áo1.jpeg'),
       price:''
     },
     {
       id:3,
       name:'Lyly vitamins',
-      img:require('./image/image20.png'),
+      img:require('./image/01.jpg'),
       price:''
     }
   ]);

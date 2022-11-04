@@ -7,26 +7,26 @@ export default function Products({ navigation }) {
   const [listProducts, setListProducts] = useState([
     {
       id:0,
-      name:'Accu-check Active Test Strip',
-      img:require('./image/image135.png'),
+      name:'Áo 3158',
+      img:require('./image/01.jpg'),
       price:'112'
     },
     {
       id:1,
-      name:'Omron HEM-8712 BP Monitor',
-      img:require('./image/image20.png'),
+      name:'Áo T2',
+      img:require('./image/03.jpg'),
       price:'150'
     },
     {
       id:2,
-      name:'Accu-check Active Test Strip',
-      img:require('./image/image21.png'),
+      name:'Áo hoa ',
+      img:require('./image/t1.jpg'),
       price:'112'
     },
     {
       id:3,
       name:'Omron HEM-8712 BP Monitor',
-      img:require('./image/image22.png'),
+      img:require('./image/t2.jpg'),
       price:'150'
     }
   ]);
