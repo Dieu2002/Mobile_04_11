@@ -215,8 +215,8 @@ const styles =  StyleSheet.create({
   },
   proName:{
     marginLeft: 16,
-    // marginBottom: 8,
-    width: 100,
+    marginTop:-50,
+    width: 110,
     fontSize: 13,
     fontWeight: '400',
     lineHeight: 19,

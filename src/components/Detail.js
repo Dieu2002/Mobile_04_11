@@ -36,11 +36,19 @@ const Detail = ({ route }) => {
         </View>
       </View>
       <View>
-        <Text style={styles.discript}>Product Details</Text>
       </View>
       <View>
-
-        <Text
+        <Image
+          style={{
+            width: 110,
+            height: 100,
+            marginTop:20
+          }}
+          source={product.img} />
+          <Text >
+          {product.name}
+          </Text>
+           <Text
           style={{
             fontWeight: '900',
             fontSize: 22,
@@ -49,15 +57,6 @@ const Detail = ({ route }) => {
           }}>
           $56
         </Text>
-        <Text style={styles.addTitle}>Etiam mollis</Text>
-      </View>
-      <View>
-        <Image
-          style={{
-            width: 110,
-            height: 100,
-          }}
-          source={product.img} />
         <Text style={styles.addCart}>Add to cart</Text>
       </View>
     </View>

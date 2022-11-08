@@ -1,5 +1,5 @@
 import MapView, { Marker,PROVIDER_GOOGLE } from 'react-native-maps'; // remove PROVIDER_GOOGLE import if not using Google Maps
-import { StyleSheet,View } from 'react-native';
+import { StyleSheet,View, Image} from 'react-native';
 
 
 const styles = StyleSheet.create({
@@ -18,26 +18,31 @@ const styles = StyleSheet.create({
 export default () => (
   <View style={styles.container}>
     <MapView
+    showsUserLocation={true}
      zoomControlEnabled={true}
      zoomEnabled={true}
       provider={PROVIDER_GOOGLE} // remove if not using Google Maps
       style={styles.map}
       region={{
-        latitude:  16.015911,
-        longitude: 108.203203,
+        latitude:  16.06002610205977,
+        longitude:  108.2435661667845,
         latitudeDelta: 0.015,
         longitudeDelta: 0.0121,
       }}
     >
-
+ 
       <Marker
         coordinate={{
           latitude:  16.015911,
           longitude: 108.203203
         }}
-        title={"Bee store shop"}
-        description={"256 Ông Ích Đ., Khuê Trung, Cẩm Lệ, Đà Nẵng 550000, Vietnam"}
+        
+        title={"Bee store"}
+      
+         
+       
       />
+        
     </MapView>
 
     
