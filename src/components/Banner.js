@@ -11,7 +11,7 @@ const Banner = ({ navigation }) => {
         <ImageBackground source={require("./image/dp.jpg")} style={styles.image}>
           <View style={styles.txtGroup}>
             <Text style={styles.text}>Save extra on every order</Text>
-            <Text style={styles.txt}>Etiam mollis metus non faucibus sollicitudin.</Text>
+            
           </View>
           {DATA.map((ele, index) => {
             return (
@@ -61,16 +61,7 @@ const styles = StyleSheet.create({
     lineHeight: 21,
     fontFamily: 'Overpass'
   },
-  txt: {
-    width: 124,
-    height: 32,
-    marginBottom: 32,
-    marginLeft: 23,
-    fontSize: 12,
-    fontWeight: '300',
-    fontFamily: 'Overpass',
-    color: 'rgba(9, 15, 71, 0.65)',
-  },
+ 
 });
 
 

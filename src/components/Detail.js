@@ -1,34 +1,22 @@
 import React from 'react';
-import {StyleSheet, Text, View, Image} from 'react-native';
+import { StyleSheet, Text, View, Image } from 'react-native';
 
 
-const Detail = () => {
+const Detail = ({ route }) => {
+  const product = route.params.item;
+
   return (
     <View style={styles.container}>
       <Text
-        style={{fontWeight: '900', fontSize: 22, color: '#090F47', left: 20}}>
+        style={{ fontWeight: '900', fontSize: 22, color: '#090F47', left: 20 }}>
         Sugar Free Gold Low Calories{' '}
       </Text>
       <Text style={styles.captionTitle}> Etiam mollis metus mon purus</Text>
       <View style={styles.logo}>
-        <Image style={styles.slideImage} source={require('./image/dp.jpg')} />
+        <Image style={styles.slideImage} source={require('./image/bbn.jpeg')} />
       </View>
       <View style={styles.introDetail}>
-        <View>
-          <Text
-            style={{
-              fontWeight: '900',
-              fontSize: 22,
-              color: '#090F47',
-              left: 20,
-            }}>
-            $56
-          </Text>
-          <Text style={styles.addTitle}>Etiam mollis</Text>
-        </View>
-        <View>
-          <Text style={styles.addCart}>Add to cart</Text>
-        </View>
+
       </View>
       <View style={styles.productPackage}>
         <Text style={styles.titlePackage}>Package size</Text>
@@ -49,6 +37,28 @@ const Detail = () => {
       </View>
       <View>
         <Text style={styles.discript}>Product Details</Text>
+      </View>
+      <View>
+
+        <Text
+          style={{
+            fontWeight: '900',
+            fontSize: 22,
+            color: '#090F47',
+            left: 20,
+          }}>
+          $56
+        </Text>
+        <Text style={styles.addTitle}>Etiam mollis</Text>
+      </View>
+      <View>
+        <Image
+          style={{
+            width: 110,
+            height: 100,
+          }}
+          source={product.img} />
+        <Text style={styles.addCart}>Add to cart</Text>
       </View>
     </View>
   );
@@ -151,6 +161,7 @@ const styles = StyleSheet.create({
   discript: {
     top: 10,
     fontWeight: 'bold',
-  }
+  },
+
 });
 export default Detail;

@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
-import { View, Text, StyleSheet, Image,FlatList, ImageBackground, ScrollView} from "react-native";
+import { View, Text, StyleSheet, Image,FlatList, ImageBackground, ScrollView, TouchableOpacity} from "react-native";
 
 
-export default function Home() {
+export default function Home({navigation}) {
   const [products, setProducts] = useState([
     {
       id:0,
@@ -32,25 +32,25 @@ export default function Home() {
   const [listProducts, setListProducts] = useState([
     {
       id:0,
-      name:'Accu-check Active Test Strip',
-      img: require('./image/t2.jpg'),
+      name:'Áo hoodie nữ',
+      img: require('./image/hdd1.jpg'),
       price:'112'
     },
     {
       id:1,
-      name:'Omron HEM-8712 BP Monitor',
-      img: require('./image/t2.jpg'),
+      name:'Quần jean nữ ống rộng ',
+      img: require('./image/01.jpg'),
       price:'150'
     },
     {
       id:2,
-      name:'Accu-check Active Test Strip',
-      img: require('./image/áo 2.jpg'),
+      name:'Quần jean nữ ống đứng',
+      img: require('./image/03.jpg'),
       price:'112'
     },
     {
       id:3,
-      name:'Omron HEM-8712 BP Monitor',
+      name:'áo khoác',
       img: require('./image/áo1.jpeg'),
       price:'150'
     }
@@ -61,13 +61,12 @@ export default function Home() {
         <ImageBackground source={require("./image/be.png" )}  style={styles.image}>
           <View style={styles.txtGroup}>
             <Text style={styles.text}>Save extra on every order</Text>
-            <Text style={styles.txt}>Etiam mollis metus non faucibus sollicitudin.</Text>
           </View>
         </ImageBackground>
       </View>
       <View style={styles.product}>
         <Text style={styles.title}>
-          Diabetic Diet
+         Feature Products
         </Text>
         <ScrollView horizontal={true}>
         <FlatList
@@ -75,14 +74,18 @@ export default function Home() {
         data={products}
         keyExtractor={item => item.name}
         renderItem={({item}) => {
-          return <View
+          return <TouchableOpacity
+          onPress={() => navigation.navigate('Detail',{item:item})}
+
           style={{
             width: 110,
             height: 162,
             backgroundColor: '#F5F7FA',
             borderRadius: 10,
             marginRight: 16
-          }}>
+          }}
+          
+          >
             <Image
               style={{
                 width: 110,
@@ -91,13 +94,13 @@ export default function Home() {
               source={item.img}/>
             <Text
               style={{
-                width: 60,
+                width: 30,
                 fontSize: 13,
                 fontWeight: '400',
                 color: '#090F47',
                 lineHeight: 18
               }}>{item.name}</Text>
-          </View>
+          </TouchableOpacity>
         }}>
         </FlatList>
         </ScrollView>
@@ -110,20 +113,25 @@ export default function Home() {
           data={listProducts}
           keyExtractor={item => item.name}
           renderItem = {({item}) => {
-            return <View style={styles.bgListProducts}>
+            return <TouchableOpacity style={styles.bgListProducts}
+            onPress={() => navigation.navigate('Detail',{item:item})}
+            >
               <View style={{
-                width: 167,
+                width: 110,
                 height: 158,
                 backgroundColor: '#F5F7FA'
               }}>
                 <Image
-                style={styles.img}
+                style={{
+                  width: 100,
+                  height: 90,
+                }}
                 source={item.img}
                 />
               </View>
               <Text style={styles.proName}>{item.name}</Text>
               <Text style={styles.proPrice}>${item.price}</Text>
-            </View>
+            </TouchableOpacity>
           }}>
           </FlatList>
         </ScrollView>
@@ -199,16 +207,16 @@ const styles =  StyleSheet.create({
   bgListProducts:{
     flex:1,
     flexDirection: 'column',
-    width: 157,
-    height: 250,
+    width: 110,
+    height: 158,
     backgroundColor: '#FFFFFF',
     marginRight: 14,
     marginBottom: 16
   },
   proName:{
     marginLeft: 16,
-    marginBottom: 8,
-    width: 108,
+    // marginBottom: 8,
+    width: 100,
     fontSize: 13,
     fontWeight: '400',
     lineHeight: 19,

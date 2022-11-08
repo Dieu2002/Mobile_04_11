@@ -1,157 +1,122 @@
+import {View, Text, StyleSheet, ScrollView, Image} from 'react-native';
 import React from 'react';
-import {StyleSheet, Text, View, Image} from 'react-native';
-
-
 const Notify = () => {
   return (
-    <View style={styles.container}>
-    
-      <Text
-        style={{fontWeight: '900', fontSize: 22, color: '#090F47', left: 20}}>
-        Sugar Free Gold Low Calories{' '}
-      </Text>
-      <Text style={styles.captionTitle}> Etiam mollis metus mon purus</Text>
-      <View style={styles.logo}>
-        <Image style={styles.slideImage} source={require('./image/notificaion.png')} />
-      </View>
-      <View style={styles.introDetail}>
-        <View>
-          <Text
-            style={{
-              fontWeight: '900',
-              fontSize: 22,
-              color: '#090F47',
-              left: 20,
-            }}>
-            $56
-          </Text>
-          <Text style={styles.addTitle}>Etiam mollis</Text>
-        </View>
-        <View>
-          <Text style={styles.addCart}>Add to cart</Text>
+    <ScrollView style={styles.container}>
+      <View style={styles.Notify}>
+        <Image
+          style={styles.logo}
+          source={require('./image/be.png')}
+        />
+        <View style={styles.title}>
+          <Text style={styles.title_main}>Welcome to the Bee Store  </Text>
+          <Text style={styles.title_main}>Thông tin sản phẩm </Text>
         </View>
       </View>
-      <View style={styles.productPackage}>
-        <Text style={styles.titlePackage}>Package size</Text>
-        <View style={styles.pricingModel}>
-          <View style={styles.priceIndi}>
-            <Text style={styles.priceFi}>$106</Text>
-            <Text style={styles.titleFi}>50 pellets</Text>
+      <View style={styles.items}>
+        <View style={styles.item}>
+          <View style={styles.iconLeft}>
+          <Image
+              source={require('./image/notificaion.png')}
+              style={{width: 26, height: 30, }}
+            />
           </View>
-          <View style={styles.priceAva}>
-            <Text style={styles.price}>$166</Text>
-            <Text style={styles.title}>110 pellets</Text>
-          </View>
-          <View style={styles.priceAva}>
-            <Text style={styles.price}>$252</Text>
-            <Text style={styles.title}>300 pellets</Text>
+          <View style={styles.infoContent}>
+            <Text style={styles.info}>Đơn hàng đã xuất kho</Text>
           </View>
         </View>
+        <View style={styles.item}>
+        <View style={styles.iconLeft}>
+          <Image
+              source={require('./image/notificaion.png')}
+              style={{width: 26, height: 30, }}
+            />
+          </View>
+          <View style={styles.infoContent}>
+            <Text style={styles.info}>Người gửi đang chuẩn bị hàng</Text>
+          </View>
+        
+        </View>
+        <View style={styles.item}>
+        <View style={styles.iconLeft}>
+          <Image
+              source={require('./image/notificaion.png')}
+              style={{width: 26, height: 30, }}
+            />
+          </View>
+          <View style={styles.infoContent}>
+            <Text style={styles.info}>My đã thêm áo khoác bomber vào giỏ hàng của cô ấy.</Text>
+          </View>
+         
+        </View>
+        <View style={styles.item}>
+        <View style={styles.iconLeft}>
+          <Image
+              source={require('./image/notificaion.png')}
+              style={{width: 26, height: 30, }}
+            />
+          </View>
+          <View style={styles.infoContent}>
+            <Text style={styles.info}>Đơn hàng đã đến kho 36-DNG Son Tra 02 LM Hub</Text>
+          </View>
+         
+        </View>
+        <View style={styles.item}>
+        <View style={styles.iconLeft}>
+          <Image
+              source={require('./image/notificaion.png')}
+              style={{width: 26, height: 30, }}
+            />
+          </View>
+          <View style={styles.infoContent}>
+            <Text style={styles.info}>Lấy hàng thành công</Text>
+          </View>
+         
+        </View>
       </View>
-      <View>
-        <Text style={styles.discript}>Product Details</Text>
-      </View>
-    </View>
+    </ScrollView>
   );
 };
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#FFFF',
-  },
-  pageTitle: {
-    fontSize: 22,
-    fontWeight: '300',
-    left: 10,
-  },
-  captionTitle: {
-    color: '#090F47',
-    left: 20,
+    marginHorizontal: 16,
+    top: 30,
   },
   logo: {
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F8F8F8',
-    marginLeft: 20,
-    marginRight: 20,
-    marginTop: 20,
-    borderBottomLeftRadius: 10,
-    borderBottomRightRadius: 10,
-    borderTopLeftRadius: 10,
-    borderTopRightRadius: 10,
-  },
-  slideImage: {
-    width: 100,
-    height: 100,
-  },
-
-  introDetail: {
-    flexDirection: 'row',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  addCart: {
-    marginLeft: 200,
-    color: '#006AFF',
-    fontSize: 22,
-  },
-  addTitle: {
-    color: '#090F47',
-    left: 20,
-  },
-  productPackage: {
-    marginTop: 30,
-    right: 20,
-  },
-  pricingModel: {
-    marginTop: 20,
-    flexDirection: 'row',
-    justifyContent: 'space-around',
-    left: 20,
-  },
-  price: {
-    fontSize: 19,
-    fontWeight: '900',
-    color: '#090F47',
+    width: 95,
+    height: 95,
+    left: 23,
+    borderRadius: 63,
+    borderWidth: 4,
   },
   title: {
-    fontsize: 12,
+    marginLeft: 50,
+    margin: 20,
   },
-  priceFi: {
-    fontSize: 19,
-    fontWeight: '900',
-    color: '#FFA41B',
+  Notify: {
+    flexDirection: 'row',
   },
-  titlePackage: {
-    color: '#090F47',
-    fontSize: 16,
-    left: 40,
+  item: {
+    flexDirection: 'row',
+    margin: 10,
+    marginTop: 10,
+    height: 55,
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: 350,
+    borderRadius: 10,
+    backgroundColor: 'white',
+    padding: 10,
   },
-  titleFi: {
-    fontsize: 12,
-    color: '#FFA41B',
+  iconLeft: {
+    margin:10,
   },
-  priceAva: {
-    backgroundColor: '#F5F5F5',
-    paddingHorizontal: 15,
-    paddingVertical: 15,
-    borderBottomLeftRadius: 10,
-    borderBottomRightRadius: 10,
-    borderTopLeftRadius: 10,
-    borderTopRightRadius: 10,
+  infoContent: {
+    flex: 1,
   },
-  priceIndi: {
-    backgroundColor: '#F5F5F5',
-    paddingHorizontal: 15,
-    borderWidth: 2,
-    paddingVertical: 15,
-    borderBottomLeftRadius: 10,
-    borderBottomRightRadius: 10,
-    borderTopLeftRadius: 10,
-    borderTopRightRadius: 10,
-  },
-  discript: {
-    top: 10,
-    fontWeight: 'bold',
+  items:{
+    marginTop: 30,
   }
 });
+
 export default Notify;

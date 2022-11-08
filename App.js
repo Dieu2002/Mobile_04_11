@@ -64,7 +64,7 @@ function MyTabs() {
           tabBarLabel: 'map',
           tabBarIcon: ({color, size}) => (
             <Image
-              source={require('./src/components/image/box.png')}
+              source={require('./src/components/image/map.jpg')}
               style={{width: 26, height: 30, }}
             />
           ),
@@ -79,6 +79,20 @@ function MyTabs() {
           tabBarIcon: ({color, size}) => (
             <Image
               source={require('./src/components/image/profile.png')}
+              style={{width: 26, height: 30, }}
+            />
+          ),
+        headerShown: false,
+        }}
+      />
+      <Tab.Screen
+        name="Detail"
+        component={Detail}
+        options={{
+          tabBarLabel: 'Detail',
+          tabBarIcon: ({color, size}) => (
+            <Image
+              source={require('./src/components/image/box.png')}
               style={{width: 26, height: 30, }}
             />
           ),

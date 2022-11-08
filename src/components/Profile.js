@@ -22,7 +22,7 @@ const Profile = () => {
             />
           </View>
           <View style={styles.infoContent}>
-            <Text style={styles.info}>Private Account</Text>
+            <Text style={styles.info}>My Account</Text>
           </View>
         </View>
         <View style={styles.item}>
@@ -46,6 +46,30 @@ const Profile = () => {
           </View>
           <View style={styles.infoContent}>
             <Text style={styles.info}>My Store</Text>
+          </View>
+         
+        </View>
+        <View style={styles.item}>
+        <View style={styles.iconLeft}>
+          <Image
+              source={require('./image/vc1.jpg')}
+              style={{width: 26, height: 30, }}
+            />
+          </View>
+          <View style={styles.infoContent}>
+            <Text style={styles.info}>Kho Voucher</Text>
+          </View>
+         
+        </View>
+        <View style={styles.item}>
+        <View style={styles.iconLeft}>
+          <Image
+              source={require('./image/DL.png')}
+              style={{width: 26, height: 30, }}
+            />
+          </View>
+          <View style={styles.infoContent}>
+            <Text style={styles.info}>Bee Strore Xu</Text>
           </View>
          
         </View>
